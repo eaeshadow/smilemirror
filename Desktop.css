@@ -1,0 +1,234 @@
+.circle {
+  border-radius: 100%;
+  width: 100%;
+  
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 
+    inset 0 0 10px #88d679, /* Reflexo interno dourado */ 
+    inset 0 0 -1px rgb(148, 2, 116), /* Brilho suave */
+    0 10 30px rgba(27, 3, 17, 0.979), /* Sombra externa */
+    0 0 30px rgba(198, 32, 240, 0.719); /*Reflexo externo mais intenso*/ 
+    background-color: #6d03aa; 
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    height: 100%;
+    margin: 10;
+}
+
+.chat-container {
+    /* justify-content: right; */
+    align-items: right;
+    margin-right: 5%;
+    width: 400px;
+    height: 500px;
+    background-color: #cac8c8; 
+    border-radius: 30px;   
+    box-shadow: none;         
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+.chat-header {
+    background-color: #a202ff;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #b0b0b0; 
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic ;
+    color: white;
+    /* border: 1px solid #000000; */
+
+}
+.message .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* .chat-box {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: auto;
+} */
+ .chat-box {
+    /* flex-grow: 1;               */
+    padding: 20px;
+    overflow-y: auto;          
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+ }
+
+.message {
+    max-width: 80%;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    border-radius: 20px; 
+    line-height: 1.4;
+    color: #ffffff;
+}
+.message p {
+    margin: 0;
+}
+
+
+.bot-message {
+    background-color: #8A2BE2;
+    align-self: flex-start;
+}
+
+
+.user-message {
+    background-color: #000000; 
+    align-self: flex-end;
+}
+
+
+/* .chat-input {
+    display: flex;
+    align-items: left;
+    padding: 15px;
+    gap: 10px; 
+    background-color: transparent;
+    align-self: flex-end;
+
+} */
+
+.chat-input {
+    align-self: flex-end;
+    padding: 60px;
+    /* padding-right: 300px; */
+    width: 100em;
+
+}
+
+#user-input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-size: 1em;
+    outline: none;
+    background-color: #8A2BE2; 
+    width: 900px;
+    align-items: left;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic ;
+    color: white;
+}
+#user-input::placeholder {
+    color: #e0c8ff;
+}
+
+
+
+.chat-input button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    padding: 0; 
+    cursor: pointer;
+    color: #cac8c8; 
+    flex-shrink: 0; 
+    transition: transform 0.2s;
+}
+
+
+.chat-input button:hover {
+    transform: scale(1.1);
+}
+
+#mic-btn.is-listening i {
+    color: #cac8c8;
+}
+.status {
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 1.8ch;
+    color: white;
+    /* display: flex; */
+}
+
+.status-dot {
+    align-items: center;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    background-color: #2ecc71; 
+    border-radius: 50%;
+    display: inline-block;
+}
+ section.cards {
+      /* background: var(--azul-bebe); */
+      /* padding: 4rem 2rem; */
+      text-align: center;
+      width: 100%;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: right;
+      gap: 1px;
+      margin-top: 1px;
+    }
+
+.janela-central{
+    align-items: left;
+    border-radius: 30px;
+    width: 550px;
+    height: 400px;
+    text-align: left;
+    padding: auto;
+    margin-top: -450px;
+    margin-right: 46%;
+    background-color: #a202ff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-self: flex-start;
+    gap: 1px;
+
+}
+.janela-central .imagem-centro{
+    text-align: center;
+    margin-right: 75px;
+    width: 400px;
+    height: 400px;
+}
+.message.bot-message {
+    flex-direction: row; 
+}
+
+.message.user-message {
+    flex-direction: row-reverse; 
+}
+
+.message .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-items: left;
+}

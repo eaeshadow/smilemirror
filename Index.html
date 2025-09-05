@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Smile Mirror</title>
+        <link rel="icon circle" href="img/1-removebg-preview.png">
+        <!-- <link rel="stylesheet" href="Desktop.css"> -->
+        <link id="estilo-principal" rel="stylesheet" href="Desktop.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+<body>
+    <section class="cards" id="cards">
+    <!-- <div class="chat-loc"> -->
+        <div class="chat-container">
+            <div class="chat-header">
+            <h2>Smile Mirror Chatbot</h2>
+            <span class="status">
+        <span class="status-dot"></span> Online</span>
+            </div>
+         <div class="chat-box" id="chat-box">
+            <div class="message bot-message">
+                <!-- <img class="avatar" src="img/1-re  movebg-preview.png" alt="Bot"> -->
+                <p>Olá! Como posso te ajudar hoje?</p>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+         <div class="janela-central">
+      <img id="imagem-centro" class="imagem-centro" src="img/1-removebg-preview.png">
+        </div>
+
+         <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+            <button id="mic-btn" title="Ativar microfone"><i class="fas fa-microphone"></i></button>
+            <button id="send-btn" title="Enviar"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        
+</section>
+<script>
+    // Lista das imagens PNG com fundo transparente
+    const imagensA= [
+       "img/-removebg-preview.png",
+       "img/2-removebg-preview.png",
+       "img/3-removebg-preview.1png",
+       "img/4-removebg-preview.png",
+ 
+    ];
+    const imagensB = [
+        "img/1-removebg-preview.png"
+    ]
+
+    let index = 0;
+    const imgElement = document.getElementById("imagem-centro");
+    
+
+    function trocarImagem() {
+      index = (index + 1) % imagensB.length;
+      imgElement.src = imagensB[index];
+    }
+
+    // Troca a cada 3 segundos
+    setInterval(trocarImagem, 1200);
+
+    function trocarImagens() {
+      index = (index + 1) % imagensA.length;
+      imgElement.src = imagensA[index];
+    }
+setInterval(trocarImagens, 800);
+  
+</script>
+    <script src="script.js"></script>
+    <!-- <script src="trocastyle.js"></script> -->
+</body>
+</html>
